@@ -42,7 +42,7 @@ while True:
     try:
         tstp,p = paint.next()
         if not fromHostToHID(p):
-            if len(p) == 68:
+          if len(p) > 68:
               numPckts += 1
               dumpSignificantData(p)
               currP = createHidPacket(p)
